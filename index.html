@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GV AEROSPACE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+        }
+    
+        .nav-links li {
+            margin-left: 20px;
+        }
+    
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: #1e293b;
+                width: 100%;
+                padding: 10px;
+                transform: translateX(100%); /* Initially hidden off-screen */
+                transition: transform 0.3s ease; /* Smooth transition for slide effect */
+            }
+    
+            /* Active class to slide in the menu */
+            .nav-links.active {
+                transform: translateX(0); /* Slide in from the right */
+            }
+    
+            .nav-toggle {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+            }
+    
+            .nav-toggle span {
+                height: 3px;
+                width: 25px;
+                background: #ffffff;
+                margin: 4px 0;
+            }
+        }
+        
+        #slide-trac {
+            display: flex;
+            width: calc(200%);
+            animation: scroll 10s linear infinite;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header class="header transparent">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="LOGO.png" alt="GV AEROSPACE Logo" class="logo-img">
+                <span>GV AEROSPACE</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#machines">Machines</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content" >
+                <h1>Your trusted partner in CNC works</h1>
+                <p>
+                    GV AEROSPACE provides precision CNC machining services, 
+                    including milling, turning, and custom tooling for industries
+                     like automotive and aerospace. We ensure high-quality,
+                      reliable manufacturing tailored to meet your specific needs.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="number">15+</span>
+                        <span class="label">Machines</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">10000+</span>
+                        <span class="label">Sq.ft Work area</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">10+</span>
+                        <span class="label">Work Men</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">5+</span>
+                        <span class="label">years of expertise</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2>About GV AEROSPACE</h2>
+                <p>We would like to introduce ourselves as designers and manufactures
+                    of tooling precision components and executors of turnkey projects in
+                    the ﬁeld of mechanical engineering, Automobile, Aerospace, Power
+                    Plant and Railways. We here with, request you to please go through
+                    the below list of machinery and manufacturing facilities available
+                    with us. We also request you to please consider us to serve you with
+                    our best service with continuous improvement.</p>
+            </div>
+        </section>
+
+        <section class="products" id="machines">
+            <h2>Our Machines</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://stmcnc.com/admin/api/product-upload/thumb-752961717749516.png" alt="Industrial Machine">
+                    <h3>CNC VERTICAL MACHINING CENTRE</h3>
+                    <p>STM VL 1100</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/298899782/YJ/LS/HR/90188897/automatic-vertical-machining-center-500x500.png" alt="Automation Systems">
+                    <h3>CNC VERTICAL MACHINING CENTRE</h3>
+                    <p>KAIZEN VMC 850</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://electronicagroup.com/wp-content/uploads/2023/03/SPINTCUTn.jpg" alt="Manufacturing Equipment">
+                    <h3>CNC WIRE EDM</h3>
+                    <p>SPRINTCUT WIN PLUS</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://www.bmedm.com/fckeditor/php/upload/image/20170117/1484616075643368.jpg" alt="Manufacturing Equipment">
+                    <h3>CNC WIRE EDM</h3>
+                    <p>CONCORD BOMMA DK 7732</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://www.promptcnc.com/uploads/images/cache/6a368fa64a1b826e346b1dbf52b838d4-570x500c10-1-1.jpg" alt="Manufacturing Equipment">
+                    <h3>CNC EDM SUPER DRILL MACHINE</h3>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/WQ/OZ/WD/31397116/creality-cr-200b-3d-printer-500x500.jpg" alt="Manufacturing Equipment">
+                    <h3>Additive Manufacturing - 3D Printing</h3>
+                    <p>Creality Cr-200B</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://www.3ding.in/img/creality-ender-3-max-neo-3d-printer-01.webp" alt="Manufacturing Equipment">
+                    <h3>Additive Manufacturing - 3D Printing</h3>
+                    <p>Ender 3 Neo Max</p>
+                </div>
+                <div class="product-card">
+                    <p></p>
+                    <img src="https://shop.laserscanning-europe.com/media/image/product/825/md/3d-scanner-artec-eva-mieten.jpg" alt="Manufacturing Equipment">
+                    <h3>ARTEC EVA 3D SCANNER</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients" id="clients">
+            <h2>Our Trusted Clients</h2>
+            <div class="clients-slider" >
+                <div class="slide-track" id="slide-trac">
+                    <div class="client-slide">
+                        <img src="https://svgmetalfinishers.com/images/about.png" alt="Client 1">
+                        <div class="client-info">
+                            <h3>SVG METAL FINISHERS</h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo--7YiZdA26nq1vT4oUdrOm_PBK51kKuxyqoPm28MV4Qrk5Bgv3MWW7D2vQYyZZamirI&usqp=CAU" alt="Client 2">
+                        <div class="client-info">
+                            <h3>ASR AEROSPACE </h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQFtVZ0l9t7Ikw/company-logo_400_400/company-logo_400_400/0/1680861840774/nucon_aerospace_logo?e=2147483647&v=beta&t=BC7GzUWgVzktQ2dJLoAwj9Av-Dgz_mSGNQulsl6V_9s" alt="Client 3">
+                        <div class="client-info">
+                            <h3>NUCON AEROSPACE</h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGAaWzD0lmhYXLBxZumi-tiULg0722vSRX_vskK8v9OcS0QffJIRBwGm6ybTDpsrgabs&usqp=CAU" alt="Client 4">
+                        <div class="client-info">
+                            <h3>HITECH HYDRAULICS</h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEU5At7UVU0xg/company-logo_200_200/company-logo_200_200/0/1675733426414/comprotech_engineering_private_limited_logo?e=2147483647&v=beta&t=TET0OfY2rQ50v1jkZKnkAvxbyNC65igcklgupbGgnA8" alt="Client 5">
+                        <div class="client-info">
+                            <h3>COMPRO TECH</h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://guardiansgroup.in/assets/images/client-logos/zen.jpg" alt="Client 5">
+                        <div class="client-info">
+                            <h3>ZEN TECHNOLOGIES </h3>
+                        </div>
+                    </div>
+                    <div class="client-slide">
+                        <img src="https://static.businessworld.in/IMG_5373_20240808112418_ogImage_47.jpeg" alt="Client 5">
+                        <div class="client-info">
+                            <h3>MTAR TECHNOLOGIES</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-image">
+                    <img src="img.svg" alt="photo">
+                </div>
+                <form class="contact-form">
+                    <p>Give your details</p>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="LOGO.png" class = "footer-img">
+                <h4>GV AEROSPACE</h4>
+                <p>Your trusted partner in computer numerical control works</p>
+                    <ul class="footer_icons">
+                        <li>
+                            <img src="icons8-facebook.svg">
+                        </li>
+                        <li>
+                            <img src="icons8-instagram.svg">
+                        </li>
+                        <li>
+                            <img src="icons8-twitter.svg">
+                        </li>
+                        <li>
+                            <img src="icons8-whatsapp.svg">
+                        </li>
+                        <li>
+                            <img src="icons8-google-maps-old.svg">
+                        </li>
+                        <li>
+                            <img src="icons8-google-mail.svg">
+                        </li>
+
+                    </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#machines">Machines</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: grindustries1122@gmail.com</p>
+                <p>Phone: +91 9014137806</p>
+                <p>Address: HNo 7-8-177/NR Plot no.84, Goutham nagar, Ferozguda Bowenpally
+                    post, Secunderabad, Medchal Malkajgiri, Telangana, 500011</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2018 GV AEROSPACE. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links li a');
+    
+            // Toggle menu visibility when the hamburger icon is clicked
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+    
+            // Close the menu when any nav link is clicked
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+                header.classList.remove('transparent');
+            } else {
+                header.classList.add('transparent');
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- #161D6F
+#0B2F9F
+#98DED9
+#C7FFD8
+rgb(22, 29, 111)
+rgb(11, 47, 159)
+rgb(152, 222, 217)
+rgb(199, 255, 216) color palets -->
+
+
+
